@@ -1,0 +1,8 @@
+float median = 0.0f;
+float average = 0.0f;
+
+// for each sample
+{
+average += (sample - average) * 0.1f; //rough running average
+median += _copysign (average * 0.01, sample - median);
+}
